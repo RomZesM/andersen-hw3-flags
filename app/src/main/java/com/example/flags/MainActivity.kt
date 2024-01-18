@@ -4,65 +4,41 @@ import android.graphics.BlurMaskFilter
 import android.graphics.BlurMaskFilter.Blur
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Im
 import android.util.Log
 import android.view.RoundedCorner
+import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.appcompat.widget.ContentFrameLayout
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.example.flags.extensions.Flags
 import com.example.flags.extensions.getImageFromURL
 
 
 class MainActivity : AppCompatActivity() {
 
-    var adress = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Spis_Castle_116.jpg/2560px-Spis_Castle_116.jpg"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        loadFlags()
+        setDataIntoLayout()
     }
 
-    fun loadFlags(){
-        val img = findViewById<ImageView>(R.id.flag_image);
-        val img2 = findViewById<ImageView>(R.id.flag_image2)
-        img.getImageFromURL(this, adress)
-        img2.getImageFromURL(this, adress)
-
-
+    fun setDataIntoLayout(){
+        //get linear from
+        val layMain : LinearLayout = findViewById(R.id.flag_linear_layout)
+        for(i in 0..layMain.childCount - 1){
+            val layWithFlag : LinearLayout = layMain.getChildAt(i) as LinearLayout;
+            val layImage : ImageView = layWithFlag.getChildAt(0) as ImageView;
+            val layText : TextView = layWithFlag.getChildAt(1) as TextView;
+            layImage.getImageFromURL(this,Flags.flagsArr[i].adress)
+            layText.setText(Flags.flagsArr[i].title)
+        }
     }
 
-//    fun loadImage(){
-//        Log.d("rmz", "load image")
-//        val imageView = findViewById<ImageView>(R.id.imageView)
-//        imageView.getImageFromURL(this, adress);
-//    }
-
-//    fun loadImage2(){
-//        Log.d("rmz", "load image")
-//        val imageView = findViewById<ImageView>(R.id.imageViewBottom)
-        //basic usage
-//        Glide.with(this)
-//            .load(adress)
-//            .into(imageView);
-        //resize image (not image view)
-//            Glide.with(this)
-//                .load(adress)
-//                .override(100, 50)
-//                .into(imageView)
-
-        //make rounded corners for image
-//            Glide.with(this)
-//                .load(adress)
-//                .transform(RoundedCorners(20))
-//                .into(imageView)
-
-        //make corcle crop of image
-//        Glide.with(this)
-//            .load(adress)
-//            .transform(CircleCrop())
-//            .into(imageView)
-    //}
 
 
  }
