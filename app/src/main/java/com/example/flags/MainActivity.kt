@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.flags.extensions.Flags
+import com.example.flags.extensions.getImageFromURLOverride
 import java.security.AccessController.getContext
 
 
@@ -28,11 +29,7 @@ class MainActivity : AppCompatActivity() {
             val layWithFlag : LinearLayout = layMain.getChildAt(i) as LinearLayout;
             val layImage : ImageView = layWithFlag.getChildAt(0) as ImageView;
             val layText : TextView = layWithFlag.getChildAt(1) as TextView;
-            //layImage.getImageFromURL(this,Flags.flagsArr[i].adress)
-            Glide.with(this)
-                .load(Flags.flagsArr[i].adress)
-                .override(dpToInt(100), dpToInt(50))
-                .into(layImage)
+            layImage.getImageFromURLOverride(this, Flags.flagsArr[i].adress, dpToInt(100), dpToInt(50))
             layText.setText(Flags.flagsArr[i].title)
         }
     }
