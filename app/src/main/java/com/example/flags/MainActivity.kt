@@ -1,12 +1,15 @@
 package com.example.flags
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.flags.extensions.Flags
-import com.example.flags.extensions.getImageFromURL
+import java.security.AccessController.getContext
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,11 +28,21 @@ class MainActivity : AppCompatActivity() {
             val layWithFlag : LinearLayout = layMain.getChildAt(i) as LinearLayout;
             val layImage : ImageView = layWithFlag.getChildAt(0) as ImageView;
             val layText : TextView = layWithFlag.getChildAt(1) as TextView;
-            layImage.getImageFromURL(this,Flags.flagsArr[i].adress)
+            //layImage.getImageFromURL(this,Flags.flagsArr[i].adress)
+            Glide.with(this)
+                .load(Flags.flagsArr[i].adress)
+                .override(dpToInt(100), dpToInt(50))
+                .into(layImage)
             layText.setText(Flags.flagsArr[i].title)
         }
     }
 
+
+    fun dpToInt(dp : Int) : Int{
+        val scale: Float = resources.getDisplayMetrics().density
+        val pixels = (dp * scale + 0.5f).toInt()
+        return pixels
+    }
 //    fun createLinearLayout(){
 //        val existedLinearLayout = findViewById<LinearLayout>(R.id.flag_linear_layout)
 //        //create layout for text and image insertion
