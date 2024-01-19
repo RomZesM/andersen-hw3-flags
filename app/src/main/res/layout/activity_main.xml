@@ -7,36 +7,17 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:id="@+id/flag_linear_layout"
+    android:gravity="center"
     tools:context=".MainActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+       >
         <ImageView
-            android:id="@+id/flag_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="100dp"
-            android:maxHeight="50dp"
-            android:text="flag_image"
-            android:adjustViewBounds="true"
-            />
-        <TextView
-            android:id="@+id/flag_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="flag_title"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
-        <ImageView
-            android:id="@+id/flag_image2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxWidth="100dp"
@@ -46,38 +27,19 @@
 
             />
         <TextView
-            android:id="@+id/flag_title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="flag_title"
-            />
-    </LinearLayout>
+            android:layout_marginLeft="10dp"
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
-        <ImageView
-            android:id="@+id/flag_image3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="100dp"
-            android:maxHeight="50dp"
-            android:text="flag_image"
-            android:adjustViewBounds="true"
-
-            />
-        <TextView
-            android:id="@+id/flag_title3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="flag_title"
             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        >
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,12 +53,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="flag_title"
+            android:layout_marginLeft="10dp"
+
             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        >
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -110,12 +76,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="flag_title"
+            android:layout_marginLeft="10dp"
+
             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        >
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -129,12 +99,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="flag_title"
+            android:layout_marginLeft="10dp"
+
             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        >
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -148,12 +122,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="flag_title"
+            android:layout_marginLeft="10dp"
+
             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        >
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -167,7 +145,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="flag_title"
+            android:layout_marginLeft="10dp"
+
             />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="100dp"
+            android:maxHeight="50dp"
+            android:text="flag_image"
+            android:adjustViewBounds="true"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="flag_title"
+            android:layout_marginLeft="10dp"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="100dp"
+            android:maxHeight="50dp"
+            android:text="flag_image"
+            android:adjustViewBounds="true"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="flag_title"
+            android:layout_marginLeft="10dp"
+
+            />
+    </LinearLayout>
+
+
 
 </LinearLayout>
